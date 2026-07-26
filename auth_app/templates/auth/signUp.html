@@ -1,0 +1,51 @@
+{%  extends 'master/base.html' %}
+{%  block container  %}
+<h1>Sign Up Page</h1>
+<form method="post">
+    {%  csrf_token  %}
+  <div class="mb-3">
+    <label for="username" class="form-label">Username</label>
+    <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp">
+  </div>
+    
+  <div class="mb-3">
+    <label for="full_name" class="form-label">Full Name</label>
+    <input type="text" class="form-control" id="full_name" name="full_name" aria-describedby="emailHelp">
+  </div>
+  
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+
+  </div>
+  
+  <div class="mb-3">
+    <label for="role" class="form-label">Role Type</label>
+  <select name="role" id="role" class="form-control">
+    <option value="Seller">Seller</option>
+    <option value="Customer">Customer</option>
+  </select>
+
+  </div>
+  
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  
+  <div class="mb-3">
+    <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+    <input type="password" name="conf_password" class="form-control" id="exampleInputPassword2">
+  </div>
+
+  <a href="{%  url 'sign_in'  %}">Already have an account?</a>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+
+
+  
+</form>
+
+
+{%  endblock container  %}

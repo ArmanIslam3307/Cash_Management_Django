@@ -1,0 +1,24 @@
+{%  extends 'master/base.html' %}
+{%  block container  %}
+<h1>Dashboard</h1>
+
+ <div class="conatiner">
+   <div class="">
+     <div class="row col-md-3">
+     <div class="bg-success">
+       <h2>Total Cash: {{total_cash}}</h2>
+     </div>
+     <div class="bg-info">
+       <h2>Total Expence: {{total_expence}}</h2>
+       
+     </div>
+     <div class="bg-danger">
+       <h2>Total: {{total}}</h2>
+       
+     </div>
+   </div>
+   </div>
+ </div>
+
+
+{%  endblock container  %}
