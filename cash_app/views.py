@@ -33,7 +33,6 @@ def sign_up(req):
     username = req.POST.get('username')
     full_name = req.POST.get('full_name')
     email = req.POST.get('email')
-    role = req.POST.get('role')
     password = req.POST.get('password')
     conf_password = req.POST.get('conf_password')
 
@@ -47,7 +46,6 @@ def sign_up(req):
         username=username,
         full_name=full_name,
         email=email,
-        role=role,
         password=conf_password
       )
       return redirect('sign_in')
