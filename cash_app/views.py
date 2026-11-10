@@ -56,8 +56,13 @@ def sign_in(req):
   if req.method == 'POST':
     username = req.POST.get('username')
     password = req.POST.get('password')
+    
+    try:
+      user_data = CustomUser.objects.get(username=username)
+    except:
+      user_data = CustomUser.objects.get(email=username)
 
-    user = authenticate(req,username=username,password=password)
+    user = authenticate(req,username=user_data.username,password=password)
 
     if user:
       login(req,user)
